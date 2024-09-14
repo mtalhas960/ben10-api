@@ -3,9 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ben 10 Api</title>
+    <title>Ben 10 API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+        h1, h2, h3, h4, h5 {
+            color: #00ff00;
+        }
+        p {
+            line-height: 1.6;
+        }
+        code {
+            background-color: #333333;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: 1.1em;
+            color: #FFF;
+        }
+        pre {
+            background-color: #333333;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 1.1em;
+            color: #00ff00;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+        ul li code {
+            display: block;
+            margin: 5px 0;
+        }
+        a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .endpoint {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ben 10 Rest Api</h1>
+    <div class="container">
+        <h1>Ben 10 API Documentation</h1>
+        <p>Welcome to the Ben 10 API! This API provides information about Ben 10 aliens and characters.</p>
+
+        <h2>Base URL</h2>
+        <p>The base URL for the API is: <code>https://ben10restapi-fl6k4l0g.b4a.run</code></p>
+
+        <h2>Endpoints</h2>
+
+        <h3>Aliens</h3>
+        <div class="endpoint">
+            <h4>Retrieve All Aliens</h4>
+            <p><code>GET /api/alien</code></p>
+            <p>Returns a list of all aliens.</p>
+            <h5>Example Response</h5>
+            <pre><code>[
+    {
+        "id": 1,
+        "name": "Heatblast",
+        "species": "Pyronite",
+        "planet": "Pyros",
+        "abilities": ["Fire manipulation", "Heat resistance"],
+        "image": "https://ben10restapi-fl6k4l0g.b4a.run/images/Heatblast.png"
+    },
+    ...
+]</code></pre>
+        </div>
+
+        <div class="endpoint">
+            <h4>Retrieve a Random Alien</h4>
+            <p><code>GET /api/alien/random</code></p>
+            <p>Returns a random alien.</p>
+            <h5>Example Response</h5>
+            <pre><code>{
+    "id": 3,
+    "name": "XLR8",
+    "species": "Kineceleran",
+    "planet": "Kinet",
+    "abilities": ["Super speed", "Enhanced reflexes"],
+    "image": "https://ben10restapi-fl6k4l0g.b4a.run/images/XLR8.png"
+}</code></pre>
+        </div>
+
+        <div class="endpoint">
+            <h4>Retrieve an Alien by ID</h4>
+            <p><code>GET /api/alien/:id</code></p>
+            <p>Returns an alien by its ID.</p>
+            <h5>Example Response</h5>
+            <pre><code>{
+    "id": 1,
+    "name": "Heatblast",
+    "species": "Pyronite",
+    "planet": "Pyros",
+    "abilities": ["Fire manipulation", "Heat resistance"],
+    "image": "https://ben10restapi-fl6k4l0g.b4a.run/images/Heatblast.png"
+}</code></pre>
+        </div>
+
+        <h3>Characters</h3>
+        <div class="endpoint">
+            <h4>Retrieve All Characters</h4>
+            <p><code>GET /api/character</code></p>
+            <p>Returns a list of all characters.</p>
+            <h5>Example Response</h5>
+            <pre><code>[
+    {
+        "id": 1,
+        "name": "Ben Tennyson",
+        "species": "Human",
+        "role": "Hero",
+        "abilities": ["Omnitrix wielder"],
+        "description": "The main protagonist of the series.",
+        "image": "https://ben10restapi-fl6k4l0g.b4a.run/images/BenTennyson.png"
+    },
+    ...
+]</code></pre>
+        </div>
+
+        <div class="endpoint">
+            <h4>Retrieve a Random Character</h4>
+            <p><code>GET /api/character/random</code></p>
+            <p>Returns a random character.</p>
+            <h5>Example Response</h5>
+            <pre><code>{
+    "id": 2,
+    "name": "Gwen Tennyson",
+    "species": "Human",
+    "role": "Hero",
+    "abilities": ["Magic", "Martial arts"],
+    "description": "Ben's cousin and a skilled magic user.",
+    "image": "https://ben10restapi-fl6k4l0g.b4a.run/images/GwenTennyson.png"
+}</code></pre>
+        </div>
+
+        <div class="endpoint">
+            <h4>Retrieve a Character by ID</h4>
+            <p><code>GET /api/character/:id</code></p>
+            <p>Returns a character by its ID.</p>
+            <h5>Example Response</h5>
+            <pre><code>{
+    "id": 1,
+    "name": "Ben Tennyson",
+    "species": "Human",
+    "role": "Hero",
+    "abilities": ["Omnitrix wielder"],
+    "description": "The main protagonist of the series.",
+    "image": "https://ben10restapi-fl6k4l0g.b4a.run/images/BenTennyson.png"
+}</code></pre>
+        </div>
+
+        <h2>Contact</h2>
+        <p>If you have any questions or need further assistance, please contact us at <a href="mailto:mtalhas960@gmail.com">mtalhas960@gmail.com</a>.</p>
+
+        <h2>GitHub Repository</h2>
+        <p>You can find the source code for this API on GitHub: <a href="https://github.com/mtalhas960/ben10-api" target="_blank">https://github.com/mtalhas960/ben10-api</a></p>
+    </div>
 </body>
 </html>
