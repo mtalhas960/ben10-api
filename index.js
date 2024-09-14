@@ -29,6 +29,12 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 // Routes
 app.use("/api/alien", aliensRouter);
 app.use("/api/character", charactersRouter);
+
+// 404 Error Handler
+app.use((req, res, next) => {
+    res.status(404).sendFile(path.join(__dirname, 'public', 'error.html'));
+});
+
 app.use("/", (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
