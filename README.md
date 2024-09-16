@@ -2,6 +2,10 @@
 
 A RESTful API for retrieving information about aliens and characters from the Ben 10 cartoon series. This API allows users to fetch detailed information and attributes for each character and alien.
 
+## Live Link App
+
+You can access the live API at: [Ben 10 API](http://ben10restapi-fl6k4l0g.b4a.run/)
+
 ## Available Routes
 
 ### Aliens
